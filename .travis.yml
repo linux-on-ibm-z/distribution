@@ -3,9 +3,13 @@ sudo: required
 # setup travis so that we can run containers for integration tests
 services:
   - docker
-arch:
-  - amd64
-  - s390x
+  
+jobs:
+  include:
+   - arch: amd64
+   - arch: s390x
+     dist: bionic
+     
 language: go
 
 go:
