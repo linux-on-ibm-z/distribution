@@ -4,6 +4,7 @@ sudo: required
 services:
   - docker
 arch:
+  - amd64
   - s390x
 language: go
 
